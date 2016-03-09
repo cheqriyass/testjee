@@ -14,7 +14,6 @@ public class Utilisateur {
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     private Long      id;
     private String    email;
-    @Column( name = "mot_de_passe" )
     private String    motDePasse;
     private String    nom;
 
