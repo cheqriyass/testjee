@@ -23,7 +23,7 @@ public class Connexion extends HttpServlet {
     public static final String ATT_FORM = "form";
     public static final String VUE      = "/index.jsp";
     public final int x=10;
-    public final int y=10;
+    public final int z=10;
     // Injection de notre EJB (Session Bean Stateless)
     @EJB
     private UtilisateurDao   utilisateurDao;
