@@ -15,7 +15,7 @@ public final class ConnexionForm {
     private String              resultat;
     private Map<String, String> erreurs      = new HashMap<String, String>();
     Utilisateur user = null;
-    
+
     public String getResultat() {
         return resultat;
     }
@@ -50,14 +50,14 @@ public final class ConnexionForm {
         }
         utilisateur.setMotDePasse( motDePasse );
 
-        
-        
+
+
         if (user!=null && utilisateur.getEmail().equals(user.getEmail())){
-        	if (utilisateur.getMotDePasse()!=null && !utilisateur.getMotDePasse().equals(user.getMotDePasse())){
-        		setErreur( CHAMP_PASS, "Mot de passe incorrect" );
-        	}
+            if (utilisateur.getMotDePasse()!=null && !utilisateur.getMotDePasse().equals(user.getMotDePasse())){
+                setErreur( CHAMP_PASS, "Mot de passe incorrect" );
+            }
         }
-        
+
         /* Initialisation du résultat global de la validation. */
         if ( erreurs.isEmpty() ) {
             resultat = "Succès de la connexion.";
@@ -73,16 +73,16 @@ public final class ConnexionForm {
      */
     private void validationEmail( String email ) throws Exception {
         if ( email != null) {
-			if (!email.matches("([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)")) {
-				throw new Exception("Merci de saisir une adresse mail valide.");
-			} else{
-				if (user==null){
-					throw new Exception("Merci de saisir une adresse mail correcte.");
-				}
-			}
-		}else{
-			throw new Exception("Merci de saisir votre adresse mail.");
-		}
+            if (!email.matches("([^.@]+)(\\.[^.@]+)*@([^.@]+\\.)+([^.@]+)")) {
+                throw new Exception("Merci de saisir une adresse mail valide.");
+            } else{
+                if (user==null){
+                    throw new Exception("Merci de saisir une adresse mail correcte.");
+                }
+            }
+        }else{
+            throw new Exception("Merci de saisir votre adresse mail.");
+        }
     }
 
     /**
