@@ -13,7 +13,7 @@ public final class ConnexionForm {
     private static final String CHAMP_PASS   = "motdepasse";
 
     private String              resultat;
-    private Map<String, String> erreurs      = new HashMap<String, String>();
+    private Map<String, String> erreurs      = new HashMap<>();
     Utilisateur user = null;
 
     public String getResultat() {
@@ -28,7 +28,7 @@ public final class ConnexionForm {
         /* Récupération des champs du formulaire */
         String email = getValeurChamp( request, CHAMP_EMAIL );
         String motDePasse = getValeurChamp( request, CHAMP_PASS );
-        email = "yass@gmail.com";
+//        email = "yass@gmail.com";
 
         Utilisateur utilisateur = new Utilisateur();
         user = utilisateurDao.trouver(email);

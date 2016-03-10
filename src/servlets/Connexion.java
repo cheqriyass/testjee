@@ -39,7 +39,7 @@ public class Connexion extends HttpServlet {
         /* Traitement de la requête et récupération du bean en résultant */
         Utilisateur utilisateur = form.connecterUtilisateur( request,utilisateurDao );
 
-        
+
         /* Stockage du formulaire et du bean dans l'objet request */
         request.setAttribute( ATT_FORM, form );
         request.setAttribute( ATT_USER, utilisateur );
