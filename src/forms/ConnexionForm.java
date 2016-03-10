@@ -13,7 +13,7 @@ public final class ConnexionForm {
     private static final String CHAMP_PASS   = "motdepasse";
 
     private String              resultat;
-    private Map<String, String> erreurs      = new HashMap<>();
+    private Map<String, String> erreurs      = new HashMap<String, String>();
     Utilisateur user = null;
 
     public String getResultat() {
